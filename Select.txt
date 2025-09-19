@@ -36,4 +36,8 @@ WHERE `level` = "magistrale"
 SELECT count(*)
 FROM `departments` 
 ------------------------------------
+/*Quanti sono gli insegnanti che non hanno un numero di telefono? */
+SELECT COUNT(*) AS `num_teachers`
+FROM `teachers`
+WHERE `phone` IS NULL
 ------------------------------------
