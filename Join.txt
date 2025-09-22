@@ -28,7 +28,16 @@ JOIN `teachers`
     ON `teachers`.`id` = `course_teacher`.`teacher_id`
 WHERE `teachers`.`name` = 'Fulvio'
   AND `teachers`.`surname` = 'Amato';
-
 ------------------------------------
+SELECT 
+    `students`.`surname`,
+    `students`.`name`,
+    `students`.`enrolment_date`,
+    `students`.`registration_number`, 
+    `degrees`.`name` AS `degree_name`
+FROM `students`
+JOIN `degrees` 
+    ON `degrees`.`id` = `students`.`degree_id`
+ORDER BY `students`.`surname`;
 ------------------------------------
 ------------------------------------
